@@ -1,0 +1,40 @@
+﻿<Window x:Class="vscode快速c艹器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="vscode快速c艹器（偏不用visual studio）" Height="484" Width="300" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid Background="#FF2D2D30">
+        <Label Content="工作空间" FontSize="13" Foreground="LightGray" HorizontalAlignment="Left" Margin="4,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779" MouseDoubleClick="Label_MouseDoubleClick"/>
+        <TextBox x:Name="wksp" Text="" HorizontalAlignment="Left" Margin="104,28,0,0" Background="gray" Foreground="white" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="64" TextChanged="wksp_TextChanged" MouseDoubleClick="wksp_MouseDoubleClick" Grid.ColumnSpan="3"/>
+        <Label Content="源文件名称" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="13,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <TextBox x:Name="sourceFileName" HorizontalAlignment="Left" Margin="13,134,0,0" Background="gray" Foreground="white" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"  Height="37" IsEnabled="False" MouseDoubleClick="sourceFileName_MouseDoubleClick" TextChanged="sourceFileName_TextChanged" LostFocus="sourceFileName_LostFocus"/>
+        <Label Content="语言类型" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="186,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <ComboBox x:Name="type" HorizontalAlignment="Left" Margin="186,138,0,0"  VerticalAlignment="Top" Width="66" IsEnabled="False" SelectionChanged="type_SelectionChanged">
+            <ComboBoxItem Content="C"/>
+            <ComboBoxItem Content="C艹"/>
+        </ComboBox>
+        <Label Content="生成对象" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="186,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <ComboBox x:Name="bits" HorizontalAlignment="Left" Margin="186,181,0,0"  VerticalAlignment="Top" Width="66" IsEnabled="False" SelectionChanged="bits_SelectionChanged"/>
+        <Label Content="MSVC cl路径" FontSize="13" Foreground="LightGray" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <TextBox x:Name="getClPath" Margin="10,333,14,0" Background="gray" Foreground="white" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="59" IsEnabled="False" TextChanged="getClPath_TextChanged"/>
+        <Label x:Name="standardWarn" Content="标准" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="20,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <TextBox x:Name="standard" Text="" HorizontalAlignment="Left" Margin="14,277,0,0" Background="gray" Foreground="white" TextWrapping="Wrap" VerticalAlignment="Top" Width="82"  Height="17" TextChanged="standard_TextChanged"/>
+        <ComboBox x:Name="sdk" HorizontalAlignment="Left" Margin="186,240,0,0"  VerticalAlignment="Top" Width="100" IsEnabled="False" >
+
+        </ComboBox>
+        <ComboBox x:Name="rp" HorizontalAlignment="Left" Margin="186,303,0,0"  VerticalAlignment="Top" Width="100" IsEnabled="False" />
+        <Label Content="运行库版本" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="186,273,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779" Height="32" Width="81"/>
+        <Label Content="SDK" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="186,215,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <Button x:Name="run" FontSize="20" Content="似乎还没有准备好……" Foreground="DarkGray" Background="Gray" HorizontalAlignment="Left" Margin="0,397,0,0" VerticalAlignment="Top" Height="65" Width="296" IsEnabled="False" Click="run_Click"/>
+        <Label Content="生成名称" FontSize="12" Foreground="LightGray" HorizontalAlignment="Left" Margin="14,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.509,-1.779"/>
+        <TextBox x:Name="exeFileName" HorizontalAlignment="Left" Margin="14,197,0,0" Background="gray" Foreground="white" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"  Height="37" IsEnabled="False" MouseDoubleClick="exeFileName_MouseDoubleClick" LostFocus="exeFileName_LostFocus"/>
+        <Button  Content="配置msvc环境" Background="LightGray" Foreground="DarkOrange" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Height="45" Width="88" Click="Button_Click"/>
+        <CheckBox x:Name="manual" Content="手动控制" Foreground="LightGray" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="shut" Content="自动关闭" Foreground="LightGray" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
+
+
+    </Grid>
+</Window>
