@@ -26,3 +26,6 @@ quick launch of a single-file c/cpp project in vs code with msvc
 >双击**工作空间**四个大字，自动打开上一次启动过的工作空间文件夹。
 
 >配置文件写在"我的文档"里，不要乱改。
+---
+发现了一个更好的解决方案qwq：
+[VSCodeConfigHelper](https://github.com/Guyutongxue/VSCodeConfigHelper3)
